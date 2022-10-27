@@ -3,13 +3,10 @@ pipeline{
     tools {
       maven 'maven3'
     }
-    parameters {
-      choice choices: ['Main', 'Feature-1', 'Gokul', 'master'], description: 'Choose the branch', name: 'Branch'
-    }
     stages{
         stage("Git checkout"){
             steps{
-                git branch: Branch ,url: 'https://github.com/gokulgk7989/New-webapp.git' 
+                git url: 'https://github.com/gokulgk7989/New-webapp.git' 
             }
         }
         stage("Maven build"){
