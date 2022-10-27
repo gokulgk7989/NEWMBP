@@ -3,9 +3,6 @@ pipeline{
     tools {
       maven 'maven3'
     }
-    parameters {
-      choice choices: ['Main', 'Feature-1', 'Gokul', 'master'], description: 'Choose the branch', name: 'Branch'
-    }
     stages{
         stage("Git checkout"){
             steps{
