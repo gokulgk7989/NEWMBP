@@ -1,12 +1,13 @@
 pipeline{
     agent any
     stages{
-        stage("Git checkout")
+        stage("Git Checkout"){
             when {
                 branch 'master'
-        }
+            }
             steps{
-                echo "Git Checkout Completed"
+                echo "Git checkout Completed"
+            }
         }
     }
 }
